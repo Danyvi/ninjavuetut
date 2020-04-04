@@ -2,9 +2,8 @@
   <div id="app">
     <NavbarInThisScope />
     <h1>{{ title }}</h1>
-    <!-- pass friend property as property of the component -->
-    <AllFriends v-bind:passfriendasprop="friends" @delete="deleteFriend"/>
-    <OnlineFriends :passfriendasprop="friends"/>
+    <AllFriends />
+    <OnlineFriends />
   </div>
 </template>
 
@@ -22,21 +21,7 @@ export default {
   },
   data(){
     return {
-      title: "Hello Developer :)",
-      friends: [
-        {name: 'Mario', online: true},
-        {name: 'Luigi', online: false},
-        {name: 'Toad', online: true},
-        {name: 'Bowser', online: false},
-      ]
-    }
-  },
-  methods: {
-    deleteFriend(payload){
-       console.log(payload);
-       this.friends = this.friends.filter(friend => {
-         return friend.name !== payload.name
-       })
+      title: "Hello Developer :)"
     }
   }
 }
