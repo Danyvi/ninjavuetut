@@ -1,4 +1,7 @@
-# myproject
+# How props (data from parent -> child ) 
+# and 
+# $emit() (data from child -> parent) 
+# work
 
 ## Project setup
 ```
